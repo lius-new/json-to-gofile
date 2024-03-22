@@ -6,8 +6,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/lius/json-to-gofile/utils"
-	"github.com/lius/json-to-gofile/write"
+	"github.com/lius-new/json-to-gofile/utils"
+	"github.com/lius-new/json-to-gofile/write"
 )
 
 // JsonFileToMap: json file to map[string]interface{}

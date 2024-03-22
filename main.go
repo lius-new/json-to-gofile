@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/lius/json-to-gofile/json"
+	"github.com/lius-new/json-to-gofile/json"
 )
 
 func main() {
