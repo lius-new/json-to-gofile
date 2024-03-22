@@ -1,7 +1,11 @@
 package main
 
-import "github.com/lius/json-to-gofile/json"
+import (
+	"github.com/lius/json-to-gofile/json"
+)
 
 func main() {
-	json.ConvertJsonFileToGoFile("./vcard.json", "test")
+	if err := json.ConvertJsonFileToGoFile("./example.json", "test"); err != nil {
+		panic(err)
+	}
 }

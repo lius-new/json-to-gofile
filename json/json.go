@@ -2,6 +2,7 @@ package json
 
 import (
 	"encoding/json"
+	"fmt"
 	"os"
 	"strings"
 
@@ -70,7 +71,7 @@ func ConvertJsonFileToGoFile(jsonFilePath string, goPackageName string) (err err
 
 	newFilePath := strings.TrimRight(jsonFilePath, ".json") + ".go"
 
-	write.WriteContentToFile(newFilePath, goPackageName+"\n")
+	write.WriteContentToFile(newFilePath, fmt.Sprintf("package %s \n", goPackageName))
 
 	for _, v := range structStrings {
 		if err = write.WriteContentToFile(newFilePath, v); err != nil {
